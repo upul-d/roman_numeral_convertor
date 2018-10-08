@@ -1,6 +1,9 @@
 public class RomanNumeral implements RomanNumeralGenerator {
     private void getThousands(int number, StringBuilder romanNumeral) {
-        // Handle thousands logic
+        while (number > 999) {
+            romanNumeral.append("M");
+            number -= 1000;
+        }
         getHundreds(number, romanNumeral);
     }
 

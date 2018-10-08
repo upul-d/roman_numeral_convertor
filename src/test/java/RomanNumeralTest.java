@@ -38,7 +38,7 @@ public class RomanNumeralTest {
     }
 
     @Test
-    public void canGetNumeralsForInputsOf4And9And10() {
+    public void canGetNumeralsForInputsOf4And9() {
         assertEquals("IV", romanNumeral.generate(4));
         assertEquals("IX", romanNumeral.generate(9));
     }
@@ -49,6 +49,18 @@ public class RomanNumeralTest {
         assertEquals("VI", romanNumeral.generate(6));
         assertEquals("VII", romanNumeral.generate(7));
         assertEquals("VIII", romanNumeral.generate(8));
+    }
+
+    @Test
+    public void canGetNumeralsForCombinationsOf1sAnd1000s() {
+        assertEquals("M", romanNumeral.generate(1000));
+        assertEquals("MM", romanNumeral.generate(2000));
+        assertEquals("MMM", romanNumeral.generate(3000));
+        assertEquals("MI", romanNumeral.generate(1001));
+        assertEquals("MMIV", romanNumeral.generate(2004));
+        assertEquals("MMMV", romanNumeral.generate(3005));
+        assertEquals("MVIII", romanNumeral.generate(1008));
+        assertEquals("MMIX", romanNumeral.generate(2009));
     }
 }
 

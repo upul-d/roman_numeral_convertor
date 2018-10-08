@@ -12,7 +12,7 @@ public class RomanNumeralTest {
     public ExpectedException exceptionRule = ExpectedException.none();
 
     @Before
-    public void before() {
+    public void setUp() {
         romanNumeral = new RomanNumeral();
     }
 

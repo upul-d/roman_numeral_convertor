@@ -31,10 +31,17 @@ public class RomanNumeralTest {
     }
 
     @Test
-    public void canGetNumeralForInputBetween1And3() {
+    public void canGetNumeralsForInputsBetween1And3() {
         assertEquals("I", romanNumeral.generate(1));
         assertEquals("II", romanNumeral.generate(2));
         assertEquals("III", romanNumeral.generate(3));
+    }
+
+    @Test
+    public void canGetNumeralsForInputsOf4And9And10() {
+        assertEquals("IV", romanNumeral.generate(4));
+        assertEquals("IX", romanNumeral.generate(9));
+        assertEquals("X", romanNumeral.generate(10));
     }
 }
 

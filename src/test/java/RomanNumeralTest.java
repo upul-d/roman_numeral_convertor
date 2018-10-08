@@ -43,5 +43,13 @@ public class RomanNumeralTest {
         assertEquals("IX", romanNumeral.generate(9));
         assertEquals("X", romanNumeral.generate(10));
     }
+
+    @Test
+    public void canGetNumeralsForInputsBetween5And8() {
+        assertEquals("V", romanNumeral.generate(5));
+        assertEquals("VI", romanNumeral.generate(6));
+        assertEquals("VII", romanNumeral.generate(7));
+        assertEquals("VIII", romanNumeral.generate(8));
+    }
 }
 

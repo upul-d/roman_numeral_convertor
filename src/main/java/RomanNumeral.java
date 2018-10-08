@@ -8,6 +8,11 @@ public class RomanNumeral implements RomanNumeralGenerator {
             romanNumeral.append("IV");
         }
 
+        if (number >= 5 && number <= 8) {
+            romanNumeral.append("V");
+            number -= 5;
+        }
+
         while (number <= 3 && number > 0) {
             romanNumeral.append("I");
             number--;

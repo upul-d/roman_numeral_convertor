@@ -111,5 +111,14 @@ public class RomanNumeralTest {
         assertEquals("LXXV", romanNumeral.generate(75));
         assertEquals("LXXXVI", romanNumeral.generate(86));
     }
+
+    @Test
+    public void canGetNumeralsForCombinationsOf10sAnd100s() {
+        assertEquals("CX", romanNumeral.generate(110));
+        assertEquals("CDXL", romanNumeral.generate(440));
+        assertEquals("DL", romanNumeral.generate(550));
+        assertEquals("DCLX", romanNumeral.generate(660));
+        assertEquals("CMXC", romanNumeral.generate(990));
+    }
 }
 

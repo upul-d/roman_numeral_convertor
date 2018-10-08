@@ -10,8 +10,10 @@ public class RomanNumeral implements RomanNumeralGenerator {
     private void getHundreds(int number, StringBuilder romanNumeral) {
         if (number >= 900 && number <= 999) {
             romanNumeral.append("CM");
+            number -= 900;
         } else if (number >= 400 && number <= 499) {
             romanNumeral.append("CD");
+            number -= 400;
         }
 
         if (number >= 500 && number <= 899) {

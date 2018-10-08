@@ -8,7 +8,21 @@ public class RomanNumeral implements RomanNumeralGenerator {
     }
 
     private void getHundreds(int number, StringBuilder romanNumeral) {
-        // Handle hundreds logic
+        if (number >= 900 && number <= 999) {
+            romanNumeral.append("CM");
+        } else if (number >= 400 && number <= 499) {
+            romanNumeral.append("CD");
+        }
+
+        if (number >= 500 && number <= 899) {
+            romanNumeral.append("D");
+            number -= 500;
+        }
+
+        while (number <= 399 && number > 99) {
+            romanNumeral.append("C");
+            number -= 100;
+        }
         getTens(number, romanNumeral);
     }
 

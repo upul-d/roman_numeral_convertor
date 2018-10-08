@@ -1,8 +1,6 @@
 public class RomanNumeral implements RomanNumeralGenerator {
     private void getOnes(int number, StringBuilder romanNumeral) {
-        if (number == 10) {
-            romanNumeral.append("X");
-        } else if (number == 9) {
+        if (number == 9) {
             romanNumeral.append("IX");
         } else if (number == 4) {
             romanNumeral.append("IV");

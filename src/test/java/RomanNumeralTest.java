@@ -41,7 +41,6 @@ public class RomanNumeralTest {
     public void canGetNumeralsForInputsOf4And9And10() {
         assertEquals("IV", romanNumeral.generate(4));
         assertEquals("IX", romanNumeral.generate(9));
-        assertEquals("X", romanNumeral.generate(10));
     }
 
     @Test

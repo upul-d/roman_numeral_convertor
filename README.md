@@ -1,6 +1,6 @@
-#BBC Coding Kata - Roman Numerals
+# BBC Coding Kata - Roman Numerals
 
-##The problem
+## The problem
 
 In whatever language you prefer, write a class that implements the following interface (example given in Java):
 
@@ -27,7 +27,7 @@ For example, see the following sample inputs and outputs:
 For an in-depth description of Roman Numerals, see [http://en.wikipedia.org/wiki/Roman_numerals](http://en.wikipedia.org/wiki/Roman_numerals)
 
 
-##My approach
+## My approach
 I will write my solution using a Test Driven Development approach.
 
 The details of my approach, assumptions I have made, or caveats will be filled out here later.

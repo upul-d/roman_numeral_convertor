@@ -31,6 +31,13 @@ public class RomanNumeralTest {
     }
 
     @Test
+    public void negativeInputThrowsException() {
+        exceptionRule.expect(IllegalArgumentException.class);
+        exceptionRule.expectMessage("Sorry, please enter a number between 1 and 3999 inclusive");
+        romanNumeral.generate(-1);
+    }
+
+    @Test
     public void canGetNumeralsForInputsBetween1And3() {
         assertEquals("I", romanNumeral.generate(1));
         assertEquals("II", romanNumeral.generate(2));

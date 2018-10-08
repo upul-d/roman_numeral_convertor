@@ -129,5 +129,14 @@ public class RomanNumeralTest {
         assertEquals("MDCLX", romanNumeral.generate(1660));
         assertEquals("MMCMXC", romanNumeral.generate(2990));
     }
+
+    @Test
+    public void canGetNumeralsForCombinationsOfAll4Units() {
+        assertEquals("MCXI", romanNumeral.generate(1111));
+        assertEquals("MMCDXLIV", romanNumeral.generate(2444));
+        assertEquals("MMMDLV", romanNumeral.generate(3555));
+        assertEquals("MDCLXVIII", romanNumeral.generate(1668));
+        assertEquals("MMMCMXCIX", romanNumeral.generate(3999));
+    }
 }
 

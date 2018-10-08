@@ -17,14 +17,14 @@ public class RomanNumeralTest {
     }
 
     @Test
-    public void numberBelowLowerLimitThrowsException() {
+    public void inputBelowLowerLimitThrowsException() {
         exceptionRule.expect(IllegalArgumentException.class);
         exceptionRule.expectMessage("Sorry, please enter a number between 1 and 3999 inclusive");
         romanNumeral.generate(0);
     }
 
     @Test
-    public void numberAboveUpperLimitThrowsException() {
+    public void inputAboveUpperLimitThrowsException() {
         exceptionRule.expect(IllegalArgumentException.class);
         exceptionRule.expectMessage("Sorry, please enter a number between 1 and 3999 inclusive");
         romanNumeral.generate(4000);

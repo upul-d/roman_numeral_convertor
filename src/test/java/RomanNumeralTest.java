@@ -8,13 +8,13 @@ import static org.junit.Assert.assertEquals;
 public class RomanNumeralTest {
     private RomanNumeral romanNumeral;
 
+    @Rule
+    public ExpectedException exceptionRule = ExpectedException.none();
+
     @Before
     public void before() {
         romanNumeral = new RomanNumeral();
     }
-
-    @Rule
-    public ExpectedException exceptionRule = ExpectedException.none();
 
     @Test
     public void numberBelowLowerLimitThrowsException() {

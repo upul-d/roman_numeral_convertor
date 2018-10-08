@@ -21,5 +21,11 @@ public class RomanNumeralTest {
         romanNumeral.generate(0);
     }
 
+    @Test
+    public void numberAboveUpperLimitThrowsException() {
+        exceptionRule.expect(IllegalArgumentException.class);
+        exceptionRule.expectMessage("Sorry, please enter a number between 1 and 3999 inclusive");
+        romanNumeral.generate(4000);
+    }
 }
 

@@ -29,7 +29,23 @@ public class RomanNumeral implements RomanNumeralGenerator {
     }
 
     private void getTens(int number, StringBuilder romanNumeral) {
-        // Handle tens logic
+        if (number >= 90 && number <= 99) {
+            romanNumeral.append("XC");
+            number -= 90;
+        } else if (number >= 40 && number <= 49) {
+            romanNumeral.append("XL");
+            number -= 40;
+        }
+
+        if (number >= 50 && number <= 89) {
+            romanNumeral.append("L");
+            number -= 50;
+        }
+
+        while (number <= 39 && number > 9) {
+            romanNumeral.append("X");
+            number -= 10;
+        }
         getOnes(number, romanNumeral);
     }
 

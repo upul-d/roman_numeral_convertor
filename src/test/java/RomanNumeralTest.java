@@ -78,5 +78,16 @@ public class RomanNumeralTest {
         assertEquals("CCVIII", romanNumeral.generate(208));
         assertEquals("CCCIX", romanNumeral.generate(309));
     }
+
+    @Test
+    public void canGetNumeralsForCombinationsOf100sAnd1000s() {
+        assertEquals("MC", romanNumeral.generate(1100));
+        assertEquals("MMCC", romanNumeral.generate(2200));
+        assertEquals("MMMCCC", romanNumeral.generate(3300));
+        assertEquals("MCD", romanNumeral.generate(1400));
+        assertEquals("MMD", romanNumeral.generate(2500));
+        assertEquals("MMMDC", romanNumeral.generate(3600));
+        assertEquals("MCM", romanNumeral.generate(1900));
+    }
 }
 
